@@ -1,0 +1,79 @@
+<div class="inner cover">
+  <h3 id="form_title">Pancard Application Form</h3>
+  <div id="form_div">
+  <%= form_for(:pancard, :url => {action: 'register_pancard_application'}, :class=>"form") do |f|%>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :full_name %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :name, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :abbr_name %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :abbr_name, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :date_of_birth %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :dob, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :fathers_name %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :fathers_name, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :address %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_area :address, :class=>"form-control", :id=> "input_field_area", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :district %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :addr_district, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :state %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :addr_state, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+    <br/><br/><br/>
+    <div class="span6">
+      <div class="pull-left">
+        <%= f.label :pincode %>
+      </div>
+      <div class="pull-right">
+        <%= f.text_field :addr_pincode, :class=>"form-control", :id=> "input_field", :required => "required"%>
+      </div>
+    </div>
+      <%= f.submit 'Register', :id=>"submit_button"%>
+    <%end%>
+  </div>
+</div>
