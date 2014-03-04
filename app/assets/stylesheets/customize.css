@@ -1,0 +1,41 @@
+#form_container {
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+#form_header {
+	text-align: center;
+}
+
+#form {
+	margin-left: 160px;
+}
+
+#input_field, #input_field_area {
+	width: 350px;
+}
+
+#submit_button {
+	margin-top: 40px;
+}
+
+#submit_button_div {
+	margin-left: 80px;
+}
+
+.navbar-inner {
+	height: 60px;
+}
+
+#app_container {
+	margin-top: 10px; 
+	font-size: 18px;
+}
+
+.brand {
+	font-size: 24px;
+}
+
+.nav-collapse .nav {
+	margin-left: 650px;
+}

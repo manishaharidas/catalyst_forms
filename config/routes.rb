@@ -1,9 +1,6 @@
 CatalystForms::Application.routes.draw do
   root 'forms#index'
 
-  get "forms/pancard"
-  get "forms/passport"
-  get "forms/register_pancard_application"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,16 +17,14 @@ CatalystForms::Application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+    resources :forms do  
+      collection do
+        get 'pancard'
+        get 'passport' 
+        post 'register_pancard_application'
+        post 'register_passport_application'
+      end
+    end
 
   # Example resource route with sub-resources:
   #   resources :products do

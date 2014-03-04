@@ -10,5 +10,10 @@ class FormsController < ApplicationController
   end
 
   def register_pancard_application
+  	p params
+  end
+
+  def register_passport_application
+  	p params
   end
 end

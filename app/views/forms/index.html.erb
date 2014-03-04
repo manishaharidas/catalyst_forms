@@ -1,10 +1,19 @@
-<div class="inner cover">
-  <h1 class="cover-heading">Welcome to Catalyst Business Centre</h1>
-  <p class="lead">Provide us your details, and we make your application submission process a pain free experience...</p>
-  <p class="lead">
-    <%= link_to 'Pancard', forms_pancard_path,:class=>"btn btn-lg btn-default"%>&nbsp&nbsp
-    <%= link_to 'Passport', forms_passport_path,:class=>"btn btn-lg btn-default"%>
-  </p>
+<div class="span12" style="margin-left: 80px; margin-top: 120px;">
+  <div class="span12" style="margin-left: 90px;">
+    <h1 style="margin-left: 120px;">Welcome to Catalyst Business Centre</h1>
+    <p class="lead">Provide us your details, and we make your application submission process a pain free experience...</p>
+  </div>
+  <div class="span12" style="margin-left: 400px;">
+    <p class="lead">
+      <%= link_to 'Pancard Form', pancard_forms_path, :class=>"btn btn-lg btn-primary", :style=>"margin-right: 70px;"%>
+      <%= link_to 'Passport Form', passport_forms_path, :class=>"btn btn-lg btn-primary"%>
+    </p>
+  </div>
+  <div class="span12" style="margin-left: 450px;">
+    <form class="navbar-form navbar-right">
+      <input type="text" class="form-control" placeholder="Search with form number...">
+    </form>
+  </div>
 </div>
 
          
