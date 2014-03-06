@@ -10,10 +10,12 @@ class CreatePancards < ActiveRecord::Migration
     	t.string :addr_state
     	t.string :addr_pincode
     	t.string :phone_number
-    	t.string :adhar_number
+    	t.string :aadhar_number
     	t.string :source_of_income
     	t.boolean :document_proof_addr
         t.boolean :document_proof_id
+        t.string :status
+        t.string :pancard_number
       t.timestamps
     end
   end

@@ -24,6 +24,9 @@ CatalystForms::Application.routes.draw do
         post 'register_pancard_application'
         post 'register_passport_application'
       end
+      member do
+        get 'show_pancard_form'
+      end
     end
 
   # Example resource route with sub-resources:

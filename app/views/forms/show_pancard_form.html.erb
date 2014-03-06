@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="span10" id="form_container">
+    <div class="page-header" id="form_header">
+      <h3>Pancard Application Form No. <%= @pancard.id%></h3>
+    </div>
+    <div class="span8" id="form">
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Full Name</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.name%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Abbr Name</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.abbr_name%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Date of Birth</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.dob%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Father's Name</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.fathers_name%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Address</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.address%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>District</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.addr_district%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>State</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.addr_state%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Pin Code</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.addr_pincode%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Phone Number</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.phone_number%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Aadhar Number</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.aadhar_number%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Source of Income</h5>
+        </div>
+        <div class="pull-right">
+          <%= @pancard.source_of_income%>
+        </div>
+      </div>
+      <!-- <br/><br/><br/> -->
+      <div class="span6">
+        <div class="pull-left">
+          <h5>Document Proof</h5>
+        </div>
+        <div class="pull-right">
+          <div class="span4">
+            <div class="pull-left" style="margin-left:50px;">
+              <% if @pancard.document_proof_addr%>
+                <i class="icon-check"></i>Address Proof
+              <%else%>
+                <i class="icon-check-empty"></i>Address Proof
+              <%end%>
+            </div>
+            <div class="pull-right" style="margin-right:50px;">
+              <% if @pancard.document_proof_id%>
+                <i class="icon-check"></i>Identity Proof
+              <%else%>
+                <i class="icon-check-empty"></i>Identity Proof
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
