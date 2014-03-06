@@ -1,4 +1,5 @@
 <div class="container">
+  <%= link_to "Print", '', 'class'=>"btn btn-default", :id => 'print_button', :style=> 'margin-top: 20px; float: right' %>
   <div class="span10" id="form_container">
     <div class="page-header" id="form_header">
       <h3>Pancard Application Form No. <%= @pancard.id%></h3>
@@ -111,16 +112,16 @@
           <div class="span4">
             <div class="pull-left" style="margin-left:50px;">
               <% if @pancard.document_proof_addr%>
-                <i class="icon-check"></i>Address Proof
+                <i class="icon-check"></i> Address Proof
               <%else%>
-                <i class="icon-check-empty"></i>Address Proof
+                <i class="icon-check-empty"></i> Address Proof
               <%end%>
             </div>
             <div class="pull-right" style="margin-right:50px;">
               <% if @pancard.document_proof_id%>
-                <i class="icon-check"></i>Identity Proof
+                <i class="icon-check"></i> Identity Proof
               <%else%>
-                <i class="icon-check-empty"></i>Identity Proof
+                <i class="icon-check-empty"></i> Identity Proof
               <%end%>
             </div>
           </div>
@@ -129,3 +130,14 @@
     </div>
   </div>
 </div>
+<script>
+$('#print_button').click(function () {
+    var prtContent = document.getElementById('form_container');
+    var WinPrint = window.open('', '', 'left=100,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    WinPrint.document.write(prtContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();// Prevent link from following its href
+});
+</script>
